@@ -1,4 +1,4 @@
-module github.com/sriram-yeluri/nexus3-cli
+module github.com/sriram-yeluri/nxrm3
 
 go 1.17
 

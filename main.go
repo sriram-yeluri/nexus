@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/sriram-yeluri/nexus3-cli/nxrm3/config"
+	"github.com/sriram-yeluri/nxrm3/config"
 )
 
 func init() {
