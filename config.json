@@ -1,5 +1,4 @@
 {
-    "tool" : "nexus",
     "url" : "http://192.168.2.123:8081",
     "username" : "admin",
     "password" : "admin123"

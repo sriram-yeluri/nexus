@@ -21,6 +21,6 @@ go install github.com/spf13/cobra-cli@latest
 ### References
 
 [Cobra](https://pkg.go.dev/github.com/spf13/cobra@v1.4.0)
-[Cobra-cli-README](https://github.com/spf13/cobra-cli/blob/main/README.md)
-
+[Cobra-cli README](https://github.com/spf13/cobra-cli/blob/main/README.md)
+[resty Simple HTTP and REST client](https://github.com/go-resty/resty)
 
