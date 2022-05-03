@@ -1,4 +1,4 @@
-package config
+package util
 
 import (
 	"fmt"
@@ -7,16 +7,14 @@ import (
 )
 
 type Config struct {
-	URL      string
-	USERNAME string
-	PASSWORD string
+	URL      string `mapstructure:"url"`
+	USERNAME string `mapstructure:"username"`
+	PASSWORD string `mapstructure:"password"`
 }
 
-var NXRMConfig Config
-
-func ReadConfig() Config {
+func LoadConfig() (config Config) {
 	viper.SetConfigName("config")         // name of config file (without extension)
-	viper.SetConfigType("json")           // REQUIRED if the config file does not have the extension in the name
+	viper.SetConfigType("yml")            // REQUIRED if the config file does not have the extension in the name
 	viper.AddConfigPath("$HOME/.appname") // call multiple times to add many search paths
 	viper.AddConfigPath(".")              // optionally look for config in the working directory
 	err := viper.ReadInConfig()           // Find and read the config file
@@ -30,13 +28,11 @@ func ReadConfig() Config {
 			panic(fmt.Errorf("fatal error config file %w ", err))
 		}
 	}
-	NXRMConfig.URL = viper.GetString("url")
-	NXRMConfig.USERNAME = viper.GetString("username")
-	NXRMConfig.PASSWORD = viper.GetString("password")
+	// If yaml file has nested elements, then use below example notation
+	// NXRMConfig.URL = viper.GetString("NXRM.URL")
+	// NXRMConfig.USERNAME = viper.GetString("NXRM.USERNAME")
 
+	var NXRMConfig Config
+	viper.Unmarshal(&NXRMConfig)
 	return NXRMConfig
-}
-
-func init() {
-	NXRMConfig = ReadConfig()
 }

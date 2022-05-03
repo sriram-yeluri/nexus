@@ -5,19 +5,20 @@ import (
 	"log"
 
 	"github.com/go-resty/resty/v2"
-	"github.com/sriram-yeluri/nxrm3/config"
 )
 
 func Status() {
 
-	endpoint := fmt.Sprintf("%s/service/rest/v1/status/check", config.NXRMConfig.URL)
+	endpoint := fmt.Sprintf("%s/service/rest/v1/status/check", NXRMConfig.URL)
+
+	InfoLogger.Println(endpoint)
 
 	client := resty.New()
 
 	resp, err := client.R().
 		EnableTrace().
 		SetHeader("Accept", "application/json").
-		SetBasicAuth(config.NXRMConfig.USERNAME, config.NXRMConfig.PASSWORD).
+		SetBasicAuth(NXRMConfig.USERNAME, NXRMConfig.PASSWORD).
 		Get(endpoint)
 	if err != nil {
 

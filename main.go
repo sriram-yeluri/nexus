@@ -27,10 +27,6 @@ func RestyClient() *resty.Client {
 
 }
 
-func init() {
-	// nxrmConfig := config.ReadConfig()
-}
-
 func main() {
 	cmd.Execute()
 }
