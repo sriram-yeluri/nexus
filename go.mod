@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
+	github.com/golang/glog v1.0.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/magiconair/properties v1.8.6 // indirect
