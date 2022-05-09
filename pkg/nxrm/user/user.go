@@ -6,8 +6,8 @@ import (
 	"net/http"
 
 	"github.com/go-resty/resty/v2"
-	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/nxrm"
-	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/util"
+	"github.com/sriram-yeluri/nexus/pkg/nxrm/nxrm"
+	"github.com/sriram-yeluri/nexus/pkg/nxrm/util"
 )
 
 type User struct {

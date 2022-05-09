@@ -16,7 +16,7 @@ limitations under the License.
 package main
 
 import (
-	"github.com/sriram-yeluri/nxrm3/pkg/cmd"
+	"github.com/sriram-yeluri/nexus/pkg/cmd"
 )
 
 func main() {

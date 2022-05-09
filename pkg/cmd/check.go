@@ -6,7 +6,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	nxrm "github.com/sriram-yeluri/nxrm3/pkg/nxrm/status"
+	nxrm "github.com/sriram-yeluri/nexus/pkg/nxrm/status"
 )
 
 // checkCmd represents the check command

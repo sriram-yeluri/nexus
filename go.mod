@@ -1,4 +1,4 @@
-module github.com/sriram-yeluri/nxrm3
+module github.com/sriram-yeluri/nexus
 
 go 1.17
 

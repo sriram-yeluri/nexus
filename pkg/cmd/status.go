@@ -6,7 +6,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/status"
+	"github.com/sriram-yeluri/nexus/pkg/nxrm/status"
 )
 
 // statusCmd represents the status command

@@ -9,8 +9,8 @@ import (
 
 	"github.com/go-resty/resty/v2"
 	"github.com/spf13/cobra"
-	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/user"
-	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/util"
+	"github.com/sriram-yeluri/nexus/pkg/nxrm/user"
+	"github.com/sriram-yeluri/nexus/pkg/nxrm/util"
 )
 
 // listCmd represents the list command
