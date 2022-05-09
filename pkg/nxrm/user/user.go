@@ -1,10 +1,13 @@
-package app
+package user
 
 import (
 	"errors"
 	"fmt"
-	"github.com/go-resty/resty/v2"
 	"net/http"
+
+	"github.com/go-resty/resty/v2"
+	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/nxrm"
+	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/util"
 )
 
 type User struct {
@@ -31,9 +34,9 @@ func NewUsersManager(client *resty.Client) UsersManager {
 
 func (um *UsersManager) GetUsers() (*[]User, error) {
 	users := new([]User)
-	uri := fmt.Sprintf("%s/service/rest/v1/security/users", NXRMConfig.URL)
-	InfoLogger.Println(uri)
-	resp, err := client.R().SetResult(users).Get(uri)
+	uri := fmt.Sprintf("%s/service/rest/v1/security/users", nxrm.NXRMConfig.URL)
+	util.Info().Println(uri)
+	resp, err := nxrm.Client.R().SetResult(users).Get(uri)
 	if err != nil {
 		return nil, err
 	}

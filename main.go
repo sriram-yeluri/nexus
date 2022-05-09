@@ -16,16 +16,8 @@ limitations under the License.
 package main
 
 import (
-	"github.com/go-resty/resty/v2"
-	"github.com/sriram-yeluri/nxrm3/cmd"
+	"github.com/sriram-yeluri/nxrm3/pkg/cmd"
 )
-
-func RestyClient() *resty.Client {
-	// Create a Resty Client
-	client := resty.New()
-	return client
-
-}
 
 func main() {
 	cmd.Execute()

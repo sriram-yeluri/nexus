@@ -6,9 +6,11 @@ package cmd
 
 import (
 	"fmt"
+
 	"github.com/go-resty/resty/v2"
 	"github.com/spf13/cobra"
-	"github.com/sriram-yeluri/nxrm3/app"
+	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/user"
+	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/util"
 )
 
 // listCmd represents the list command
@@ -17,10 +19,10 @@ var listCmd = &cobra.Command{
 	Short: "Get list of users in Nexus",
 	Long:  `Get list of users in Nexus`,
 	Run: func(cmd *cobra.Command, args []string) {
-		um := app.NewUsersManager(resty.New())
+		um := user.NewUsersManager(resty.New())
 		users, err := um.GetUsers()
 		if err != nil {
-			app.ErrorLogger.Println(err)
+			util.Error().Println(err)
 			return
 		}
 		fmt.Println(*users)

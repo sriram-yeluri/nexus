@@ -6,7 +6,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/sriram-yeluri/nxrm3/app"
+	"github.com/sriram-yeluri/nxrm3/pkg/nxrm/status"
 )
 
 // statusCmd represents the status command
@@ -15,7 +15,7 @@ var statusCmd = &cobra.Command{
 	Short: "Get the status of Nexus Repository Manager",
 	Long:  `Get the status of Nexus Repository Manager`,
 	Run: func(cmd *cobra.Command, args []string) {
-		app.Status()
+		status.Status()
 	},
 }
 
