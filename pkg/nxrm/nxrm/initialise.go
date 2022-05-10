@@ -5,8 +5,7 @@ import (
 )
 
 var (
-	NXRMConfig Config
-	Client     *resty.Client
+	Client *resty.Client
 )
 
 func SetRestyClient() *resty.Client {

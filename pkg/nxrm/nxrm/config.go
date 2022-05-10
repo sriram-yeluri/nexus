@@ -6,6 +6,8 @@ import (
 	"github.com/spf13/viper"
 )
 
+var NXRMConfig Config
+
 type Config struct {
 	URL      string `mapstructure:"url"`
 	USERNAME string `mapstructure:"username"`
@@ -32,7 +34,6 @@ func LoadConfig() (config Config) {
 	// NXRMConfig.URL = viper.GetString("NXRM.URL")
 	// NXRMConfig.USERNAME = viper.GetString("NXRM.USERNAME")
 
-	var NXRMConfig Config
 	viper.Unmarshal(&NXRMConfig)
 	return NXRMConfig
 }
