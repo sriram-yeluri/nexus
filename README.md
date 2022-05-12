@@ -1,34 +1,33 @@
+# Nexus CLI
+nexus cli is created to manage Nexus OSS
 
-### Hosting the Nexus OSS instance
-
-I am running Nexus OSS on Raspberry PI as a docker container. 
+## How to user the cli 
 
 ```sh
-docker run -d -p 8081:8081 --name nexus klo2k/nexus3
+./nexus -h
+Nexus Repository Manager OSS CLI.
 
-# check if the nexus3 container is created successfully
-docker container ls 
+Usage:
+  nexus [command]
 
-# wait till the nexus instance is fully started
-docker logs nexus -f 
+Available Commands:
+  add         Add resources to Nexus
+  check       Check the health status of Nexus Repository Manager
+  help        Help about any command
+  list        Get list of users and repositories in Nexus
+  status      Get the status of Nexus Repository Manager
 
-#access nexus3 at default port 8081 -> http://192.168.2.123:8081
+Flags:
+  -h, --help   help for nexus
 
-#exec into the contaner to get the initial admin password
-docker exec -it nexus /bin/bash
+Use "nexus [command] --help" for more information about a command.
 ```
 
 ## Prerequisites
+* [Hosting Nexus OSS](docs/nexusOSS.md)
+* [Installing Cobra-cli](docs/prerequisites.md)
 
-### Install Cobra library for CLI
-
-```sh
-go get -u github.com/spf13/cobra@latest
-go install github.com/spf13/cobra-cli@latest
-```
-
-
-### References for libraries i used in creating this CLI
+### References for libraries used in creating nexus CLI
 
 * [Cobra](https://pkg.go.dev/github.com/spf13/cobra@v1.4.0)
 * [Cobra-cli README](https://github.com/spf13/cobra-cli/blob/main/README.md)
