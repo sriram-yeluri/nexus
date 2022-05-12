@@ -23,7 +23,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "nxrm3",
+	Use:   "nexus",
 	Short: "Nexus Repository Manager OSS CLI",
 	Long:  `Nexus Repository Manager OSS CLI.`,
 }

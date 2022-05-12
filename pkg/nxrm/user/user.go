@@ -36,7 +36,8 @@ func (um *UsersManager) GetUsers() (*[]User, error) {
 	users := new([]User)
 	uri := fmt.Sprintf("%s/service/rest/v1/security/users", nxrm.NXRMConfig.URL)
 	util.Info().Println(uri)
-	resp, err := nxrm.Client.R().SetResult(users).Get(uri)
+	// resp, err := nxrm.Client.R().SetResult(users).Get(uri)
+	resp, err := um.Client.R().SetResult(users).Get(uri)
 	if err != nil {
 		return nil, err
 	}
@@ -45,6 +46,6 @@ func (um *UsersManager) GetUsers() (*[]User, error) {
 	case http.StatusOK:
 		return users, nil
 	default:
-		return nil, errors.New("request to nexus failed...")
+		return nil, errors.New("request to nexus failed")
 	}
 }
