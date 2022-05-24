@@ -1,0 +1,11 @@
+
+usage :
+
+nexus user list
+nexus user add
+nexus user delete
+
+
+nexus repo list
+nexus repo add
+nexus repo delete
