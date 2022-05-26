@@ -14,8 +14,9 @@ Available Commands:
   add         Add resources to Nexus
   check       Check the health status of Nexus Repository Manager
   help        Help about any command
-  list        Get list of users and repositories in Nexus
+  repo        Manage Nexus Repositories
   status      Get the status of Nexus Repository Manager
+  user        Manage Nexus Users
 
 Flags:
   -h, --help   help for nexus
